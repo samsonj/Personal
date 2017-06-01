@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]><html {{site.language_attributes}} class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html {{site.language_attributes}} class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html {{site.language_attributes}} class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html {{site.language_attributes}} class="no-js"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">  
+
+    {# Google Chrome Frame for IE #}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>
+        {% if wp_title %}
+            {{ wp_title }}
+        {% else %}
+            {{ site.name }}
+        {% endif %}
+    </title>
+
+    <script type="text/javascript">
+        var domain = '{{ domain }}';
+        var ajaxurl = '{{ ajax_url }}';
+        var templateurl = '{{ theme.link }}';
+    </script>
+
+    {# mobile meta #}
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% if aka_settings.fav_icon != '' %}
+        <link rel="shortcut icon" href="{{ aka_settings.fav_icon }}" >
+    {% endif %}
+    {% if aka_settings.touch_icon != '' %}
+        <link rel="apple-touch-icon" href="{{ aka_settings.touch_icon }}" >
+    {% endif %}
+
+    <!--[if IE]>
+        <link rel="shortcut icon" href="{{ theme.link }}/favicon.ico">
+    <![endif]-->
+
+    <meta name="msapplication-TileColor" content="#f01d4f">
+    <meta name="msapplication-TileImage" content="{{ theme.link }}/library/images/win8-tile-icon.png">
+
+    <link rel="pingback" href="{{ function('bloginfo','pingback_url') }}">
+
+    {{ function('wp_head') }}
+
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script><![endif]-->
+
+    <!-- HEADER STYLES -->
+    <!--[if lt IE 7]>
+    <script type="text/javascript">
+        var BLANK_URL = 'http://www.etq-amsterdam.com/js/blank.html';
+        var BLANK_IMG = 'http://www.etq-amsterdam.com/js/spacer.gif';
+    </script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/etq_v2/css/styles30f4.css?v=4" media="all" />
+    <!--<link rel="stylesheet" type="text/css" href="skin/frontend/base/default/css/widgets30f4.css?v=3" media="all" />-->
+    <link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/default/css/customerlocator/styles30f4.css?v=3" media="all" />
+    <link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/etq_v2/css/filterproducts/filterproducts30f4.css?v=3" media="all" />
+    <link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/etq_v2/css/styles-menu30f4.css?v=3" media="all" />
+    <link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/etq_v2/css/jquery.selectbox30f4.css?v=3" media="all" />
+    <link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/etq_v2/css/configed/design_default30f4.css?v=3" media="all" />
+    <link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/etq_v2/css/configed/settings_default30f4.css?v=3" media="all" />
+    <!--<link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/etq_v2/css/custom30f4.css?v=3" media="all" />-->
+    <!--<link rel="stylesheet" type="text/css" href="content/themes/AKA-General/skin/frontend/default/default/css/print30f4.css?v=3" media="print" />-->
+
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="http://www.etq-amsterdam.com/skin/frontend/default/etq_v2/css/styles-ie.css?v=3" media="all" />
+    <![endif]-->
+    <!--[if lt IE 7]>
+        <script type="text/javascript" src="http://www.etq-amsterdam.com/js/lib/ds-sleight.js"></script>
+        <script type="text/javascript" src="http://www.etq-amsterdam.com/skin/frontend/base/default/js/ie6.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="http://www.etq-amsterdam.com/skin/frontend/default/etq_v2/js/ie-addons.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)" href="skin/frontend/default/etq_v2/css/ipad-only.css" />
+    <link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape)" href="skin/frontend/default/etq_v2/css/ipad-only.css" />
+
+</head>
+
+<body class="{{ body_class }}  cms-page-view cms-about " >
+
+{# drop Google Analytics Below #}
+
+{#  end analytics  #}
+
+
+<!-- <header id="header" class="container">
+    <div class="row">
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <a href="{{function('bloginfo','url')}}/" title="{{ function('bloginfo', 'name') }}" rel="homepage" class="navbar-brand">
+                    {% if aka_settings.brand_logo %}
+                        <img src="{{ aka_settings.brand_logo }}" alt="{{ function('wp_title') }}" title="{{ function('wp_title') }}">
+                    {% else %}
+                        {{ function('bloginfo','title') }}
+                    {% endif %}
+                </a>
+
+            </div>
+
+            {# Collect the nav links, forms, and other content for toggling #}
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                {{ function('aka_main_nav') }}
+                {# function('get_search_form') #}
+            </div>
+        </nav>
+
+    </div>
+</header> -->
+
+{# Inside logo if needed
+    {% if  aka_settings.brand_logo_inside  %}
+       <!--  <img src="{{ aka_settings.brand_logo_inside }}" alt="{{ function('wp_title') }}" title="{{ function('wp_title') }}"> -->
+    {% else %}
+        {{ function('bloginfo','title') }}
+    {% endif %}
+#}
+
+ 
+<div id="landscape"><div>Please rotate your device for optimal experience.</div></div>
+<div id="preloader">
+    <div id="status">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 516 524" width="165px" height="165px" xml:space="preserve">   
+            <g>     
+                <g>                                                   
+                    <path class="path" fill="#FFF" stroke="#000" stroke-width="4" stroke-miterlimit="10"  d="M240.1,5.8c43.9-3.6,88.6,4.3,128.5,23c54.5,25.3,99.3,70.4,124.3,125c19.2,41.6,26.6,88.5,21.7,134
+                        c-3.8,36.2-15.7,71.5-34.3,102.8c-32,54.1-84.7,95.6-145,113.8c-46.1,14.1-96.2,14.7-142.7,1.8c-60.1-16.4-113.4-56-146.9-108.5
+                        C24.6,364.8,11.1,327,7,288.1c-4.1-37.6,0.2-76.2,12.7-112C39,120.4,78.4,72,129,41.6C162.6,21.3,200.9,8.9,240.1,5.8z M407.6,119
+                        c-47.2,45.5-94.5,90.9-141.7,136.4c-14.4-16.7-37.1-21.5-54.1-34.7c-8.5-6.5-9.7-20.7-1.9-28.2c5.8-5.5,13.9-7.6,21.7-8
+                        c12.6-0.6,25.7,1.8,36.3,9.1c0-6.9,0-13.7,0-20.6c-10.1-4.8-21.4-5.1-32.4-5.2c-14.9-0.1-30.6,4.2-41.3,15.1
+                        c-13.1,13.3-12.2,37.3,1.6,49.8c12.4,11.2,28.4,16.9,42.7,25.2c5.1,2.8,9.9,6.5,12.9,11.5c-11.1,10.5-22,21.2-33,31.7
+                        c-9.6-2.1-19.2-5.5-26.7-11.9c0.1,7-0.1,14.1,0.1,21.2c3.8,2.1,7.9,3.6,12.1,4.6c-33.6,32.3-67.2,64.7-100.8,97
+                        c9,0,17.9,0.1,26.9-0.1c63.3-61.1,126.8-122,190.1-183.1c0.2,21.1,0.7,42.2,0.9,63.3c0.3,10.1,0,20.5-3.5,30.1
+                        c-2.3,6.2-6.7,12-13.2,14c-7.7,2.5-16.6,1.3-23.4-3.2c0.5,6.6-0.4,13.6,0.8,20.1c8.4,3.2,17.8,3,26.5,1.1
+                        c11.9-2.8,21.6-11.8,26.7-22.7c6.8-14.1,6.9-30.1,6.4-45.5c-0.5-25.6-0.7-51.1-1.1-76.7c31.4-30.1,62.6-60.3,93.9-90.4
+                        C425.4,119,416.5,119,407.6,119z"></path>
+                </g>
+            </g>
+            </svg>
+    </div>
+</div>
+
+
+<style>
+@media only screen and (min-width: 768px)  {
+    .box-scroll {
+        position:fixed;
+        top: 0px;  
+        bottom: auto;
+    }
+}
+</style>
+
+
+<div class="wrapper">
+    <div class="overlay-pagination"></div>
+        <noscript>
+        <div class="global-site-notice noscript">
+            <div class="notice-inner">
+                <p>
+                    <strong>JavaScript seems to be disabled in your browser.</strong><br />
+                    You must have JavaScript enabled in your browser to utilize the functionality of this website.                </p>
+            </div>
+        </div>
+    </noscript>
+    <div id="wrap" class="page">
+        <div class="header-container" data-size="big">
+            <div class="header">
+                <div class="header-bground">
+                    <div class="header-sidebar">
+            
+                        <div class="box-logo">
+                            <a href="about.html" title="Sam Johnson - Web Developer & Designer" class="logo transition" class="mainLogo">
+                            <strong>Sam Johnson</strong>
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 516 524"  width="75px" height="75px" xml:space="preserve" >
+                                <path fill="#1a1a1a" d="M240.1,5.8c43.9-3.6,88.6,4.3,128.5,23c54.5,25.3,99.3,70.4,124.3,125c19.2,41.6,26.6,88.5,21.7,134
+                                    c-3.8,36.2-15.7,71.5-34.3,102.8c-32,54.1-84.7,95.6-145,113.8c-46.1,14.1-96.2,14.7-142.7,1.8c-60.1-16.4-113.4-56-146.9-108.5
+                                    C24.6,364.8,11.1,327,7,288.1c-4.1-37.6,0.2-76.2,12.7-112C39,120.4,78.4,72,129,41.6C162.6,21.3,200.9,8.9,240.1,5.8z"/>
+                                <path d="M407.6,119c-47.2,45.5-94.5,90.9-141.7,136.4c-14.4-16.7-37.1-21.5-54.1-34.7c-8.5-6.5-9.7-20.7-1.9-28.2
+                                    c5.8-5.5,13.9-7.6,21.7-8c12.6-0.6,25.7,1.8,36.3,9.1c0-6.9,0-13.7,0-20.6c-10.1-4.8-21.4-5.1-32.4-5.2
+                                    c-14.9-0.1-30.6,4.2-41.3,15.1c-13.1,13.3-12.2,37.3,1.6,49.8c12.4,11.2,28.4,16.9,42.7,25.2c5.1,2.8,9.9,6.5,12.9,11.5
+                                    c-11.1,10.5-22,21.2-33,31.7c-9.6-2.1-19.2-5.5-26.7-11.9c0.1,7-0.1,14.1,0.1,21.2c3.8,2.1,7.9,3.6,12.1,4.6
+                                    c-33.6,32.3-67.2,64.7-100.8,97c9,0,17.9,0.1,26.9-0.1c63.3-61.1,126.8-122,190.1-183.1c0.2,21.1,0.7,42.2,0.9,63.3
+                                    c0.3,10.1,0,20.5-3.5,30.1c-2.3,6.2-6.7,12-13.2,14c-7.7,2.5-16.6,1.3-23.4-3.2c0.5,6.6-0.4,13.6,0.8,20.1c8.4,3.2,17.8,3,26.5,1.1
+                                    c11.9-2.8,21.6-11.8,26.7-22.7c6.8-14.1,6.9-30.1,6.4-45.5c-0.5-25.6-0.7-51.1-1.1-76.7c31.4-30.1,62.6-60.3,93.9-90.4
+                                    C425.4,119,416.5,119,407.6,119z" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                        
+                        <div class="box-scroll">
+                            <a class="btn-close-bag" id="mobnav">
+                                <span class="mobnav-open-icon" id="mobicon" ></span>
+                            </a> 
+                     
+                            <div class="nav-container">
+                                <ul id="nav" class="default">
+                                    <li class="level0"><a href="#" id="open-left" class=""><button  data-icon="&#xe057;" class="btn icon"><span>About</span></button></a></li>  
+                                    <li class="level0"><a href="#" id="open-cart" class=""><button data-icon="&#xe05c;" class="btn icon"><span>Skills</span></button></a></li>  
+                                    <li class="level0" ><a href="#" id="open-bottom" class=""><button  data-icon="&#xe039;"  class="btn icon"><span>Contact</span></button></a></li>    
+                                </ul>   
+                                
+                                <a href="#" class="btn-close-bag" id="filter-portfolio"> 
+                                    <span class="filter-portfolio-icon" id="mobicon" ></span>
+                                </a> 
+                            </div>                  
+
+                        </div> 
+                    </div>
+
+                </div>
+                <div class="header-topbar">
+                    <div class="quick-access">
+                    </div>
+                    <h1 class="page-title"></h1>
+                    <div class="clearer"></div>
+                </div>
+            </div>
+        </div>      
+
+        <div id="mob-overlay-bg"></div>
+        <div class="main-container col1-layout">
+            <div class="main">
+                <div class="col-main">                 
+                    <div class="std">
+                        <div id="about">
+                            <!-- BEGIN portfolio-row -->
+                            <div class="page-row margin-no">
+<div>
+<div>
+    <div class="portfolio-menu" >   
+       <ul id="nav" class="default port-menu-holder">
+            <li class="level0 port-menu-lst"><a href="#" id="open-left" data-filter="*" ><button  data-icon="&#xe068;" class="btn icon port-menu"><span class="port-title">All</span></button></a></li> 
+            <li class="level0 port-menu-lst"><a href="#" id="open-left" data-filter=".menu1" ><button  data-icon="&#xe080;" class="btn icon port-menu"><span class="port-title" >Web Development</span></button></a></li>   
+            <li class="level0 port-menu-lst"><a href="#" id="open-cart" data-filter=".menu2" ><button data-icon="&#xe066;" class="btn icon port-menu"><span class="port-title" >Mobile & Web Apps</span></button></a></li>  
+            <li class="level0 port-menu-lst"><a href="#"  data-filter=".menu3" ><button  data-icon="&#xe067;"  class="btn icon port-menu"><span class="port-title" >Logos & Brandings</span></button></a></li>  
+            <li class="level0 port-menu-lst"><a href="#" id="open-left" data-filter=".menu1" ><button  data-icon="&#xe07f;" class="btn icon port-menu"><span class="port-title" >Web Development</span></button></a></li>     
+        </ul>
+    </div>

@@ -1,0 +1,43 @@
+.tourDates.map {position: relative; z-index: 1;}
+.tourDates.map ul {padding: 0; list-style: none;}
+.tourDates.map li {margin: 0; padding: 0; list-style: none;}
+.tourDates.map .marker {
+	position: absolute;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	text-indent: -999em;
+	background: url(../images/marker.png);
+	cursor: pointer;
+	display: none;
+}
+.tourDates.map .details {
+	position: absolute;
+	z-index: 3;
+	display: none;
+	width: 150px;
+	height: 180px;
+	margin-top: -43px;
+	margin-left: -10px;
+	padding: 10px;
+	border: 3px solid black;
+	border-radius: 10px;
+	background: #fff;
+}
+.tourDates.map .close {
+	position: absolute;
+	z-index: 4;
+	top: -5px;
+	right: -5px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 3px;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 12px;
+	background: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+}

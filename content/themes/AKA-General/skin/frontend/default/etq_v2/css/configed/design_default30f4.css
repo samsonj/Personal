@@ -1,0 +1,41 @@
+a { 
+    color: #848484; 
+        }
+a:hover { color: #4e4d49; }
+button.button span { 
+		background: #fff; 
+		color: #313131; 
+		border: 2px solid #1c1c1c;
+		min-width: 186px;
+		height: 36px;
+        }
+button.button:hover span { background: #1c1c1c; color: #ffffff; }
+button.button:active span { background: #1c1c1c; color: #ffffff; }
+
+.sale-product-icon { background: #d04d49; color: #ffffff; }
+.new-product-icon { background: #2f3538; color: #ffffff; }
+#opc-review .data-table tfoot td.last strong .price, #opc-review td.last .price, .cart .totals tfoot td .price, .cart-table td.sub-total, .top-cart .qty-price .price, .block .regular-price, .block .regular-price .price, .price-box .price, .special-price .price { 
+    color: #d64c35; 
+        }
+.block .block-title strong {
+        }
+.page {  }
+/*** Header **/
+.page, .header, .header .header-topbar, .header h1.page-title { background-color: #fff; height: 80px;} 
+
+.header .header-bground { /* background-color: #ffffff; */}
+.header .form-search input.input-text { color: #74736a; border-color: #c5c5c5; }
+.header .form-search input.input-text:hover { color: #74736a; border-color: #c5c5c5; }
+.header h1.page-title {
+        }
+.footer { color: #848484; }
+.footer a { color: #848484; }
+.footer a:hover { color: #ffffff; }
+.footer button.button span { background: #535451; color: #ffffff; }
+.footer button.button:hover span { background: #2f3538; color: #ffffff; }
+.footer .col3-set { color: #848484; }
+.footer .col3-set a { color: #848484; }
+.footer .col3-set a:hover { color: #ffffff; }
+.footer .footer-menu { color: #848484; }
+.footer .footer-menu a { color: #848484; }
+.footer .footer-menu a:hover { color: #ffffff; }

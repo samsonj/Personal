@@ -1,0 +1,29 @@
+{% for post in posts %}
+
+    <article class="highlights-article animate fade-in">
+        <header>
+            <h3>{{ post.title }}</h3>
+        </header>
+        <div class="content">
+            {% if post.type == 'external' %}
+                {{ post.content }}
+            {% else %}
+                <p>{{ post.get_preview(20, false, '') }}</p>
+            {% endif %}
+        </div>
+        <footer>
+            <ul class="category-list">
+                {% for cat in post.get_terms('category') %}
+                    <li><a href="{{cat.link}}" class="button ghost tan small">{{cat.name}}</a></li>
+                {% endfor %}
+            </ul>
+            {% if post.type == 'external' %}
+                <a href="{{ post.external_link }}" target="_blank" class="button fill blue">Read More</a>
+            {% else %}
+                <a href="{{ post.permalink }}" class="button fill blue">Read More</a>
+            {% endif %}
+        </footer>
+        <hr class="divider point-right">
+    </article>
+
+{% endfor %}

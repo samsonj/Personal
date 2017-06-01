@@ -1,0 +1,12 @@
+.datePicker { cursor: pointer; }
+h3.nav-tab-wrapper { font-weight: normal; }
+#tourdate_booking_details, #tourdate_map_details, #tourdate_location_add { display: none; }
+#tourdatemap { width: auto; position: relative; margin-top: 15px; }
+#tourdatemap.clickable { cursor: crosshair; }
+#tourdatemap .map { position: relative; z-index: 1; }
+#tourdatemap .marker { z-index: 2; position: absolute; top: 0; left: 0; display: none; }
+input[type=radio] {margin-right: 3px; margin-top: -1px; }
+#tourdates_shortcode, #currentlocation_shortcode {font-size: 16px; margin: 0; padding: 15px; clear: both; cursor: pointer;width: 100%;text-align: center;background: #fff;box-shadow: 0px 0px 10px #ccc; border: 2px dotted #ccc;}
+#std_locationformat, #std_bookingformat {width: 350px;}
+.shortcode_table label em {color: #999;}
+.big_textarea {width: 350px; height: 75px;}

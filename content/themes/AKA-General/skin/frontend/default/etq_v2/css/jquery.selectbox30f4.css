@@ -1,0 +1,184 @@
+@CHARSET "UTF-8";
+.sbHolder{
+    font-weight: normal;
+    height: 40px;
+    position: relative;
+    width: 220px;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+	letter-spacing: 3px;
+	font-size: 9px;
+	text-transform: uppercase;
+	font-size: 9px;
+	color: #313131;
+	background-color: #fff;
+}
+.sbHolder:focus .sbSelector{
+	
+}
+.sbSelector{
+	display: block;
+    height: 36px;
+    left: 0;
+    line-height: 36px;
+    border: 2px solid #1b1b1b;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 166px;
+	border-right: none;
+	
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color: #151515;
+    outline: none;
+    text-decoration: none;
+    padding: 0px;
+}
+
+.product-view .sbSelector:link, .product-view .sbSelector:visited, .product-view .sbSelector:hover{
+    padding: 0px 0px 0px 15px;
+}
+
+.sbToggle{
+	background: url(../images/select-icons.png) 6px -23px no-repeat;
+    border-right: 2px solid #1c1c1c;
+	border-top: 2px solid #1c1c1c;
+	border-bottom: 2px solid #1c1c1c;
+    display: block;
+    height: 36px;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+	transition: background 300ms ease-in-out;
+    -moz-transition: background 300ms ease-in-out;
+    -webkit-transition: background 300ms ease-in-out;
+    -o-transition: background 300ms ease-in-out;
+}
+.sbToggle:hover{
+	background: url(../images/select-icons.png) 6px 12px no-repeat;
+}
+.sbToggleOpen{
+	background: url(../images/select-icons.png) 6px 12px no-repeat;
+}
+.sbToggleOpen:hover{
+	background: url(../images/select-icons.png) 6px 12px no-repeat;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (-moz-min-device-pixel-ratio: 1.5),
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+		   
+		.sbToggle{
+			background: url(../images/select-icons%402x.png) 6px -23px no-repeat;
+			background-size: 13px 110px;
+		}
+		.sbToggle:hover{
+			background: url(../images/select-icons%402x.png) 6px 12px no-repeat;
+			background-size: 13px 110px;
+		}
+		.sbToggleOpen{
+			background: url(../images/select-icons%402x.png) 6px 12px no-repeat;
+			background-size: 13px 110px;
+		}
+		.sbToggleOpen:hover{
+			background: url(../images/select-icons%402x.png) 6px 12px no-repeat;
+			background-size: 13px 110px;
+		}
+		
+		.product-shop .sbToggle {
+			width: 97%; background: url(../images/select-icons%402x.png) 180px -23px no-repeat; z-index:10;
+			background-size: 13px 110px;
+		}	
+		.product-shop .sbToggle:hover { 
+			width: 97%; background: url(../images/select-icons%402x.png) 180px 12px no-repeat;
+			background-size: 13px 110px;
+		}
+		
+
+	}
+
+	
+	
+/************* width < 768px ***************/
+@media only screen and (max-width: 767px)  {
+	
+		.product-shop .sbToggle {
+			width: 40px; background: url(../images/select-icons%402x.png) 6px -23px no-repeat; z-index:10;
+			background-size: 13px 110px;
+		}	
+		.product-shop .sbToggle:hover { 
+			width: 40px; background: url(../images/select-icons%402x.png) 6px 12px no-repeat;
+			background-size: 13px 110px;
+		}
+}
+	
+
+.sbHolderDisabled{
+	background-color: #3C3C3C;
+	border: solid 1px #515151;
+}
+.sbHolderDisabled .sbHolder{
+	
+}
+.sbHolderDisabled .sbToggle{
+	
+}
+.sbOptions{
+    background-color: #ffffff;
+    border: solid 2px #1b1b1b;
+    color: #848484;
+    list-style: none;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 25px;
+    width: 216px;
+    z-index: 15;
+    overflow-y: auto!important;
+	border-top: none;
+	padding-bottom: 10px;
+}
+.sbOptions li{
+    padding: 0 5px;
+    margin: 1px 0;
+}
+.sbOptions a{
+    display: block;
+    outline: none;
+    padding: 3px 10px;
+}
+.sbOptions a:link, .sbOptions a:visited{
+    color: #848484;
+    text-decoration: none;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: #000;
+}
+.sbOptions li.last a{
+	border-bottom: none;
+}
+.sbOptions .sbDisabled{
+	color: #e3e3e3;
+	display: block;
+	padding: 3px 10px;
+}
+.sbOptions .sbGroup{
+	border-bottom: dotted 1px #515151;
+	color: #EBB52D;
+	display: block;
+	font-weight: bold;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub{
+	padding-left: 17px;
+}

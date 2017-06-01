@@ -1,0 +1,22 @@
+{
+  "name": "AKA-generic-wordpress",
+  "description": "",
+  "main": "",
+  "license": "(MIT OR Apache-2.0)",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.3",
+    "bootstrap-sass": "~3.3.5",
+    "lightgallery": "~1.2.6",
+    "components-font-awesome": "~4.5.0"
+  }
+}

@@ -1,0 +1,30 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+
+<main>
+<div id="page-wrapper">
+	<div class="container">
+		<div class="row">
+			{% for post in posts %}
+
+			<header id="page-header">
+			    <h1>{{ post.title }}</h1>
+			</header>
+
+			<div class="page-content">
+				<div class="col-md-12">
+					{{ post.content }}
+					
+				
+					<a href="{{ domain }}/block-page-2" class="button fill blue">Back</a>
+				</div>
+			</div> 
+
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+{% endblock %}

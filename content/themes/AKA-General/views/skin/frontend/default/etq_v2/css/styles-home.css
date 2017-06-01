@@ -1,0 +1,89 @@
+.footer-container { 
+	display: none;
+}
+#overlay-bg {
+	background-color: #fff;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	top: 0;
+	transition-duration: 1000ms;
+	-o-transition-duration: 1000ms;
+	-webkit-transition-duration: 1000ms;
+	-moz-transition-duration: 1000ms;
+}
+
+.overlay-pagination {
+	position: absolute;
+	right: 40px;
+	bottom: 150px;
+	z-index: 5;
+}
+.overlay-pagination ul li{
+	float: left;
+	padding: 5px 5px 5px 5px;
+	line-height: 0px;
+	font-size: 9px;
+}
+
+.overlay-pagination ul li a{
+	color: #b8b8b8;
+}
+
+.overlay-pagination ul li a:hover{
+	color: #040707;
+}
+
+.overlay-pagination ul li.showPage a{
+	color: #040707;
+}
+
+#overlay-top {
+	min-height: 80%;
+	width: 100%;
+	height: 85%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index:2;
+	background-color: #fff;
+
+	
+}
+#overlay-top img{
+	max-width: none;
+}
+
+#down {
+	position: fixed;
+	bottom: 0px;
+	background-color: #fff;
+}
+
+.category-right{
+	position: absolute;
+	top: 260px;
+}
+.category-right.stick{
+	top: 37px;
+	position: fixed;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+#category-right-anchor {
+	position: absolute;
+	top:220px;
+}
+
+#wrap {
+	padding-top: 223px;
+}
+@media only screen and (max-width: 767px)  {
+	#mob-overlay-bg {display: block; height: 305px;}
+}
+.col1-layout .products-grid li.item:first-child {
+	margin-top: 5%;
+}
+
+.wrapper {margin-top: 100%;}

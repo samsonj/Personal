@@ -1,0 +1,19 @@
+<nav class="pagination">
+
+    {% for item in pagination.pages %}
+        {% if item.current %}
+            <span>{{ item.label }}</span>
+        {% else %}
+            <a href="{{ item.link }}" class="button ghost tan btn-primary">{{ item.label }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if pagination.prev %}
+        <a href="{{ pagination.prev }}" class="button ghost tan prev"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+    {% endif %}
+
+    {% if pagination.next %}
+        <a href="{{ pagination.next }}" class="button ghost tan next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+    {% endif %}
+
+</nav>

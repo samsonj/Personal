@@ -1,0 +1,12 @@
+{
+    "require": {
+        "facebook/php-sdk-v4" : "~5.0",
+        "j7mbo/twitter-api-php": "dev-master",
+        "cosenary/instagram": "dev-master"
+	},
+    "autoload": {
+        "psr-4": {
+            "ContentHub\\": "src"
+        }
+    }
+}

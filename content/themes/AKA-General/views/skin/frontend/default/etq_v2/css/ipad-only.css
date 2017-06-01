@@ -1,0 +1,73 @@
+/* Product Details ==================== */
+
+#slides, .slidesjs-slide {
+	-webkit-transform: translate3D(0px, 0px, 0px);
+	-webkit-backface-visibility: hidden;
+}
+				
+#slides img, .slidesjs-slide img{
+	-webkit-transform: translate3D(0px, 0px, 0px);
+	-webkit-backface-visibility: hidden;
+}
+
+/* Product Zoom ===================== */
+.peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlClose
+{	background: url(../images/flare/close.png) no-repeat 0 0;
+	position: fixed;
+	right: 2%;
+	top: 4%;
+	left: auto;
+	width: 55px;
+	height: 55px;
+}
+
+.peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlPrev{
+	background:url(../images/flare/prev.png) no-repeat right bottom; position: fixed;cursor: auto;
+	left: 89%;bottom: 2%;width: 50px;
+}
+.peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlNext{
+	background:url(../images/flare/next.png) no-repeat right bottom; position: fixed;cursor: auto;
+	bottom: 2%;left: 92%;width: 50px;
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (-moz-min-device-pixel-ratio: 1.5),
+       only screen and (-o-min-device-pixel-ratio: 3/2),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+			.peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlClose	
+			{	background: url(../images/flare/close%402x.png) no-repeat 0 0;
+				position: fixed;
+				right: 2%;
+				top: 3%;
+				left: auto;
+				width: 56px;
+				height: 55px;
+				background-size: 48px 48px;
+			}
+
+			.peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlPrev{background:url(../images/flare/prev%402x.png) no-repeat right bottom; position: fixed;cursor: auto;
+				left: 88%;bottom: 2%;width: 50px; background-size: 30px 30px;}
+			.peFlareLightbox .peFlareLightboxControls a#peFlareLightboxControlNext{background:url(../images/flare/next%402x.png) no-repeat right bottom; position: fixed;cursor: auto;
+				bottom: 2%;left: 91%;width: 50px; background-size: 30px 30px;}
+}
+
+
+/* iPad Retina fixes */
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){
+	.peFlareLightbox .peFlareLightboxControls {-webkit-transform: translateZ(0px);z-index: 1000;position: fixed;height: 100%;width: 100%;}
+}
+
+/* Our Story */ 
+#our-story-row1 .content-block {margin-top: 100px;}
+#our-story-row2 .content-block {margin-top: 100px;}
+#our-story-row3 .content-block {margin-top: 100px;}
+
+@media only screen and (orientation:portrait){
+
+		#our-story-row1 .content-block {margin-top: 85px;}
+		#our-story-row2 .content-block {margin-top: 84px;}
+		#our-story-row3 .content-block {margin-top: 85px;}
+}
+

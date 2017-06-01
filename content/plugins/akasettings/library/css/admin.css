@@ -1,0 +1,40 @@
+/* AKA SETTINGS ADMIN */
+
+/*
+THE BELOW DOES NOT WORK ANYMORE
+#wpcontent #wpadminbar .quicklinks #wp-admin-bar-root-default #wp-admin-bar-wp-logo .ab-icon { width: 60px; background-image: url(../images/aka-admin.png); background-position: 10px -15px;  }
+#wpcontent #wpadminbar .quicklinks #wp-admin-bar-root-default #wp-admin-bar-wp-logo.hover .ab-icon {background-position: 10px 0;}
+*/
+
+#development_mode_text, #update_notifications_options { display: none; margin-left: 40px; }
+#development_mode_banner { 
+	width: 100%; position: relative; 
+	color: #d70000; background: #ffb8b8;
+	padding: 15px 0; text-align: center; 
+	font-weight: bold; font-size: 25px; line-height: 25px;   
+	-moz-box-shadow: 0px 0px 10px #3c3c3c;
+	-webkit-box-shadow: 0px 0px 10px #3c3c3c;
+	box-shadow: 0px 0px 10px #3c3c3c; 
+	z-index:10001;
+}
+
+.restrictedOverlay {
+	background: url(../images/restricted-bg.png) repeat;
+	z-index:10000;
+	width:100%;
+	height:100%;
+	position: fixed;
+	top: 0; left: 0;
+}
+
+#wpadminbar .restrictedOverlay {height: 60px;}
+
+/* AKA SETTINGS COOKIES */
+#cookie_notification_copy, #cookie_notification_css, #cookie_notification_js { width: 380px; height: 100px; font-size: 11px; line-height: 15px; }
+#loadingCookieTable, #cookie_table_message {margin-left: 10px; vertical-align: middle;}
+.cookies-form-table th, 
+.cookies-form-table td, 
+.cookies-form-table th p,
+.cookies-form-table td p {
+	font-size: 13px;
+}
